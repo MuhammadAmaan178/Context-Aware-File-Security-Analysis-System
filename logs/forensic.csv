@@ -1,0 +1,2 @@
+timestamp,severity,type,details,user,ip
+2026-01-08 12:06:56,INFO,FILE_SECURED,Medical Record healthy_patient_report.txt encrypted & stored.,patient_01,192.168.1.100

@@ -1,14 +1,12 @@
-
 # Secrets
 .env
 hospital.key
 
-# Logs & Data (Keep folder structure, ignore content)
-logs/
-uploads/
-auth/users.csv
-
 # Documentation (Local Only)
+Project_Guide_Urdu.md
+Project_Report.md
+Group_Viva_Guide.md
+Pre-Project Things/
 Project_Guide_Urdu.md
 Project_Report.md
 Group_Viva_Guide.md
