@@ -1,0 +1,10 @@
+streamlit
+groq
+python-dotenv
+numpy
+cryptography
+plotly
+pandas
+requests
+flask
+flask-cors

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 300px;
+      background-color: #0E1117;
+      color: #00FF41;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 10px;
+    }
+    h3 {
+      border-bottom: 1px solid #00FF41;
+      padding-bottom: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #003B00;
+      color: #00FF41;
+      border: 1px solid #00FF41;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #00FF41;
+      color: black;
+    }
+    #result {
+      margin-top: 15px;
+      font-size: 14px;
+      min-height: 50px;
+    }
+    .safe { color: #00FF41; }
+    .danger { color: #FF0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h3>🛡️ Security Agent</h3>
+  <p id="current-url" style="font-size: 10px; color: #888;">Ready to scan.</p>
+  <button id="scan-btn">SCAN CURRENT PAGE</button>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

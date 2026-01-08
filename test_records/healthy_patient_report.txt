@@ -1,0 +1,11 @@
+PATIENT: JOHN DOE
+ID: 123456
+DATE: 2026-01-08
+
+FINDINGS:
+Patient is healthy. Vital signs are normal.
+Heart Rate: 72 bpm
+BP: 120/80
+
+RECOMMENDATION:
+Discharge.

@@ -1,0 +1,2 @@
+This file has a dangerous name that simulates an SQL Injection attack.
+The content is safe, but the filename is the weapon.

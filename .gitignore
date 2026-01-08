@@ -1,0 +1,23 @@
+
+# Secrets
+.env
+hospital.key
+
+# Logs & Data (Keep folder structure, ignore content)
+logs/
+uploads/
+auth/users.csv
+
+# Documentation (Local Only)
+Project_Guide_Urdu.md
+Project_Report.md
+Group_Viva_Guide.md
+Pre-Project Things/
+
+# Python
+__pycache__/
+*.pyc
+
+# System
+thumbs.db
+.DS_Store

@@ -1,0 +1,3 @@
+This is a dummy file simulating a virus.
+Safe-Test-Malware-Signature
+DO NOT EXECUTE. FOR TESTING ONLY.
