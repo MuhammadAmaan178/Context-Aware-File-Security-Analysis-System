@@ -238,10 +238,32 @@ def main():
     st.sidebar.markdown("---")
     
     # Check Firewall (Lab 11)
-    # Simulate User IP (Localhost)
-    user_ip = "192.168.1.100" 
+    # FIREWALL CHECK: Real IP Detection
+    from streamlit.web.server.websocket_headers import _get_websocket_headers
+    
+    def get_remote_ip():
+        """Attempts to get the real client IP address."""
+        try:
+            headers = _get_websocket_headers()
+            if headers is None:
+                return "127.0.0.1"
+            
+            # X-Forwarded-For (Standard for Proxies/Cloud)
+            x_forwarded = headers.get("X-Forwarded-For")
+            if x_forwarded:
+                return x_forwarded.split(",")[0]
+                
+            # Fallback for some setups
+            return headers.get("Remote-Addr", "127.0.0.1")
+        except Exception:
+            return "127.0.0.1"
+
     if "user_ip" not in st.session_state:
-        st.session_state["user_ip"] = user_ip
+        st.session_state["user_ip"] = get_remote_ip()
+    
+    # Refresh IP on every rerun to catch changes
+    user_ip = get_remote_ip()
+    st.session_state["user_ip"] = user_ip # Sync session state
 
     # FIREWALL CHECK: Doctors are EXEMPT from IP Bans
     # We check role AFTER auth, but for IP blocking (Pre-Auth), we simulate standard enforcement.
